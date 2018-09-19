@@ -1,5 +1,7 @@
 # NameCase
 
+[![Build Status](https://travis-ci.org/compwright/namecase.png)](https://travis-ci.org/compwright/namecase)
+
 A Javascript library for fixing the capitalization of people's names.
 
 It is heavily based on the Perl
@@ -51,7 +53,7 @@ from stdin and outputs the formatted names to stdout.
 ### Node
 
 ```javascript
-var nc = require('namecase');
+var nc = require('@compwright/namecase');
 
 String.prototype.toNameCase = function () {
   var name = this.toString();
@@ -67,7 +69,7 @@ console.log("MCKINLEY".toNameCase());
 
 ### Command line
 
-Install with ```npm install -g namecase```.
+Install with ```npm install -g @compwright/namecase```.
 
 ```bash
 namecase < input.txt > ouput.txt
@@ -91,5 +93,3 @@ Template.templateName.helpers({
   }
 });
 ```
-
-[![Build Status](https://travis-ci.org/emgee3/namecase.png)](https://travis-ci.org/emgee3/namecase)

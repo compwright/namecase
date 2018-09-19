@@ -1,8 +1,8 @@
 Package.describe({
-  name: "emgee:namecase",
+  name: "compwright:namecase",
   summary: "A Javascript library for fixing the capitalization of people's names.",
   version: "1.1.2",
-  git: "https://github.com/emgee3/namecase.git"
+  git: "https://github.com/compwright/namecase.git"
 });
 
 Package.onUse(function(api) {

@@ -1,5 +1,5 @@
 {
-  "name": "namecase",
+  "name": "@compwright/namecase",
   "version": "v1.1.2",
   "description": "Module for fixing capitalization of people's names",
   "keywords": [
@@ -10,9 +10,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/emgee3/namecase.git"
+    "url": "https://github.com/compwright/namecase.git"
   },
   "author": "Mason Gravitt <emgee@gravitronic.com>",
+  "contributors": [
+    "Jonathon Hill <jhill9693@gmail.com>"
+  ],
   "engines": {
     "node": ">=6"
   },
@@ -26,5 +29,5 @@
     "test": "./node_modules/mocha/bin/mocha test"
   },
   "bin": "./bin/namecase",
-  "bugs": "https://github.com/emgee3/namecase/issues"
+  "bugs": "https://github.com/compwright/namecase/issues"
 }
