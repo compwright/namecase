@@ -21,8 +21,8 @@
     "node": ">=10"
   },
   "devDependencies": {
-    "microbundle": "^0.12.3",
     "mocha": "^8.1.3",
+    "parcel-bundler": "^1.12.4",
     "semistandard": "^14.2.3"
   },
   "bin": "./bin/namecase",
@@ -36,7 +36,7 @@
     "pretest": "npm run lint",
     "test": "mocha test",
     "prebuild": "npm test",
-    "build": "microbundle -i src/index.js -o dist/namecase.min.js --no-pkg-main -f umd --name namecase"
+    "build": "parcel build src/index.js --out-file namecase.min.js --target browser --no-cache --global namecase"
   },
   "semistandard": {
     "ignore": [
