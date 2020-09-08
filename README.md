@@ -28,7 +28,7 @@ from STDIN and outputs the formatted names to STDOUT.
 ### Browser
 
 ```html
-<script source="https://unpkg.com/@compwright/namecase/dist/namecase.min.js"></script>
+<script source="https://unpkg.com/@compwright/namecase@latest/dist/namecase.min.js"></script>
 <script>
   console.log(namecase('GEORGE WASHINGTON'));
 </script>
