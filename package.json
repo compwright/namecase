@@ -1,6 +1,6 @@
 {
   "name": "@compwright/namecase",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Module for fixing capitalization of people's names",
   "keywords": [
     "namecase",
