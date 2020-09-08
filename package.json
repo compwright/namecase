@@ -29,7 +29,7 @@
   "main": "src/",
   "files": [
     "src",
-    "dist"
+    "dist/namecase.*"
   ],
   "scripts": {
     "lint": "semistandard --fix",
