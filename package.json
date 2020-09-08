@@ -27,6 +27,9 @@
   },
   "bin": "./bin/namecase",
   "main": "src/",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "lint": "semistandard --fix",
     "pretest": "npm run lint",
