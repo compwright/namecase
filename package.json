@@ -28,6 +28,7 @@
   "bin": "./bin/namecase",
   "main": "src/",
   "files": [
+    "src",
     "dist"
   ],
   "scripts": {
