@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-var NameCase = require('../namecase');
-var os = require('os');
+const nameCase = require('../src');
+const os = require('os');
 
-var str = "", out = [];
+let str = '', out = [];
 
 process.stdin.resume();
 process.stdin.setEncoding('utf8');
@@ -15,11 +15,11 @@ process.stdin.on('data', function(chunk) {
 process.stdin.on('end', function () {
   str = str.split(/\r\n|\r|\n/);
 
-  for (var i = 0; i < str.length; i++) {
-    if (NameCase.checkName(str[i])) {
-      out.push(NameCase(str[i]));
+  for (let i = 0; i < str.length; i++) {
+    if (nameCase.checkName(str[i])) {
+      out.push(nameCase(str[i]));
     } else {
-      out.push(NameCase.normalize(str[i]));
+      out.push(nameCase.normalize(str[i]));
     }
   }
 

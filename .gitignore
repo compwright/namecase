@@ -1,7 +1,3 @@
-.DS_Store
-log
-tmp
 node_modules
-npm-debug.log
-coverage
-.build*
+.DS_Store
+*.log
