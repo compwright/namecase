@@ -1,4 +1,4 @@
-# namecase
+# @compwright/namecase
 
 [![Build Status](https://travis-ci.org/compwright/namecase.png)](https://travis-ci.org/compwright/namecase)
 
