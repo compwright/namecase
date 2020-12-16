@@ -34,8 +34,8 @@ function nc (el, opt = {}) {
   // Exclude names with 1-2 letters after prefix like Mack, Macky, Mace
   // Exclude names ending in a,c,i,o, or j are typically Polish or Italian
   if (
-    new RegExp(/\bMac[A-Za-z]{2,}[^aciozj]\b/).test(el) ||
-    new RegExp(/\bMc/).test(el)
+    /\bMac[A-Za-z]{2,}[^aciozj]\b/.test(el) ||
+    /\bMc/.test(el)
   ) {
     el = el.replace(
       /\b(Ma?c)([A-Za-z]+)/,
