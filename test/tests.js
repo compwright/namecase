@@ -117,7 +117,7 @@ const combinedFields = [
   'David Albert Huffman', 'Rebecca Heineman', 'Anders Hejlsberg', 'Ted Henter',
   'Andy Hertzfeld', 'Rich Hickey', 'D. Richard Hipp', 'C. A. R. Hoare',
   'James Holmes', 'Grace Hopper', 'Dave Hyatt', 'Miguel de Icaza',
-  'Roberto Ierusalimschy', 'Dan Ingalls', 'Geir Ivarsøy',
+  'Roberto Ierusalimschy', 'Dan Ingalls', 'Geir Ivarsøy', 'Torbjörn Manninger',
   'Kenneth E. Iverson', 'Toru Iwatani', 'Bo Jangeborg', 'Paul Jardetzky',
   'Lynne Jolitz', 'William Jolitz', 'Stephen C. Johnson', 'Bill Joy',
   'Robert K. Jung', 'Poul-Henning Kamp', 'Mitch Kapor', 'Phil Katz',

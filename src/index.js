@@ -101,7 +101,7 @@ function nc (el, opt = {}) {
   // Somewhat arbitrary rule where two letter combos not containing vowels should be capitalized
   // fixes /JJ Abrams/ and /JD Salinger/
   // With some exceptions
-    .replace(/\b[bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ]{2}\s/, v => v.toUpperCase())
+    .replace(/(?:^|\\s)[bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ]{2}\s/, v => v.toUpperCase())
     .replace(/\bMR\.?\b/, 'Mr')
     .replace(/\bMS\.?\b/, 'Ms')
     .replace(/\bDR\.?\b/, 'Dr')
