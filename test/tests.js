@@ -1,64 +1,64 @@
 /* eslint-env mocha */
 
-const assert = require('assert');
-const nameCase = require('../src');
+import assert from 'node:assert';
+import { checkName, namecase } from '../src/index.js';
 
-describe('nameCase.checkName()', function () {
+describe('checkName()', function () {
   it('should see if case fixes are necessary', function () {
-    assert.strictEqual(true, nameCase.checkName('GEORGE WASHINGTON'));
-    assert.strictEqual(true, nameCase.checkName('george washington'));
-    assert.strictEqual(false, nameCase.checkName('George Washington'));
+    assert.strictEqual(true, checkName('GEORGE WASHINGTON'));
+    assert.strictEqual(true, checkName('george washington'));
+    assert.strictEqual(false, checkName('George Washington'));
   });
 });
 
 describe('Input Types', function () {
   it('should handle strings', function () {
-    assert.strictEqual('George Washington', nameCase('GEORGE WASHINGTON'));
+    assert.strictEqual('George Washington', namecase('GEORGE WASHINGTON'));
   });
 
   it('should handle arrays', function () {
     assert.deepStrictEqual(
       ['George Washington', 'Thomas Jefferson'],
-      nameCase(['George Washington', 'Thomas Jefferson'])
+      namecase(['George Washington', 'Thomas Jefferson'])
     );
   });
 
   it('should return numbers unaffected', function () {
-    assert.strictEqual(42, nameCase(42));
+    assert.strictEqual(42, namecase(42));
   });
 
   it('should return dates unaffected', function () {
     const d = new Date();
-    assert.strictEqual(d, nameCase(d));
+    assert.strictEqual(d, namecase(d));
   });
 
   it('should not barf on nulls', function () {
-    assert.strictEqual(null, nameCase(null));
+    assert.strictEqual(null, namecase(null));
   });
 
   it('should not barf on undefined', function () {
-    assert.strictEqual(undefined, nameCase(undefined));
+    assert.strictEqual(undefined, namecase(undefined));
   });
 
   it('should not barf on non-strings inside arrays', function () {
     const input = [null, undefined, {}, new Date()];
-    const output = nameCase(input);
-    assert.strictEqual(output[0], nameCase(input[0]));
-    assert.strictEqual(output[1], nameCase(input[1]));
-    assert.strictEqual(output[2], nameCase(input[2]));
-    assert.strictEqual(output[3], nameCase(input[3]));
+    const output = namecase(input);
+    assert.strictEqual(output[0], namecase(input[0]));
+    assert.strictEqual(output[1], namecase(input[1]));
+    assert.strictEqual(output[2], namecase(input[2]));
+    assert.strictEqual(output[3], namecase(input[3]));
   });
 });
 
-describe('nameCase', function () {
+describe('namecase', function () {
   it('should handle basic capitalization', function () {
-    assert.strictEqual('George Washington', nameCase('GEORGE WASHINGTON'));
-    assert.strictEqual('George Washington', nameCase('george washington'));
-    assert.strictEqual('George Washington', nameCase('gEoRgE wAsHiNgToN'));
+    assert.strictEqual('George Washington', namecase('GEORGE WASHINGTON'));
+    assert.strictEqual('George Washington', namecase('george washington'));
+    assert.strictEqual('George Washington', namecase('gEoRgE wAsHiNgToN'));
   });
 });
 
-// Names from http://cpansearch.perl.org/src/SUMMER/Lingua-EN-NameCase-1.15/t/namecase.t
+// Names from http://cpansearch.perl.org/src/SUMMER/Lingua-EN-Namecase-1.15/t/namecase.t
 const individualFields = [
   'Keith', 'Leigh-Williams', 'McCarthy',
   "O'Callaghan", 'St. John', 'von Streit',
@@ -81,10 +81,10 @@ const individualFields = [
   'Charles II'
 ];
 
-describe('nameCase on individual fields', function () {
+describe('namecase on individual fields', function () {
   it('should handle list of names', function () {
     for (let i = 0; i < individualFields.length; i++) {
-      assert.strictEqual(individualFields[i], nameCase(individualFields[i], { individualFields: true }));
+      assert.strictEqual(individualFields[i], namecase(individualFields[i], { individualFields: true }));
     }
   });
 });
@@ -167,10 +167,10 @@ const combinedFields = [
   'Lori & Leslie Cotton/Smith', 'Ron/Alejandra Brown', 'Derrick/Sandra Jackson'
 ];
 
-describe('nameCase on combined fields', function () {
+describe('namecase on combined fields', function () {
   it('should handle list of names', function () {
     for (let i = 0; i < combinedFields.length; i++) {
-      assert.strictEqual(combinedFields[i], nameCase(combinedFields[i]));
+      assert.strictEqual(combinedFields[i], namecase(combinedFields[i]));
     }
   });
 });

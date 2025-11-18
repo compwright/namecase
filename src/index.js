@@ -1,8 +1,8 @@
 // Don't change capitalization unless capitalization isn't set
-const checkName = name => name === name.toLowerCase() || name === name.toUpperCase();
+export const checkName = name => name === name.toLowerCase() || name === name.toUpperCase();
 
 // Strip out extraneous spaces
-const normalize = name => name.replace(/\s{2,}/g, ' ');
+export const normalize = name => name.replace(/\s{2,}/g, ' ');
 
 // Actual case fixing function
 function nc (el, opt = {}) {
@@ -129,7 +129,7 @@ function nc (el, opt = {}) {
   return el.charAt(0).toUpperCase() + el.substring(1);
 }
 
-function namecase (input, opt) {
+export function namecase (input, opt) {
   if (Array.isArray(input)) {
     return input.map(namecase);
   }
@@ -140,7 +140,3 @@ function namecase (input, opt) {
 
   return input;
 }
-
-module.exports = namecase;
-module.exports.checkName = checkName;
-module.exports.normalize = normalize;

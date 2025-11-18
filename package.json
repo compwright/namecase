@@ -17,30 +17,19 @@
   "contributors": [
     "Jonathon Hill <jhill9693@gmail.com>"
   ],
+  "type": "module",
   "engines": {
-    "node": ">=10"
+    "node": ">=20"
   },
   "devDependencies": {
     "mocha": "^11.7.5",
-    "parcel-bundler": "^1.12.5",
     "semistandard": "^17.0.0"
   },
   "bin": "./bin/namecase",
-  "main": "src/",
-  "files": [
-    "src",
-    "dist/namecase.*"
-  ],
+  "source": "src/index.js",
   "scripts": {
     "lint": "semistandard --fix",
     "pretest": "npm run lint",
-    "test": "mocha test",
-    "prebuild": "npm test",
-    "build": "parcel build src/index.js --out-file namecase.min.js --target browser --no-cache --global namecase"
-  },
-  "semistandard": {
-    "ignore": [
-      "dist"
-    ]
+    "test": "mocha test"
   }
 }
